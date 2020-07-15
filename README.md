@@ -10,6 +10,10 @@
 ) section has info about setting the dns server (helpful on corpnet)
 3. (Optional) Install [vsvscode](https://github.com/JetsonHacksNano/installVSCode)
 
+https://docs.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/export-model-python
+
+https://stackoverflow.com/questions/53187474/receive-webrtc-video-stream-using-python-opencv-in-real-time
+
 
 
 https://github.com/JetsonHacksNano/installLibrealsense
