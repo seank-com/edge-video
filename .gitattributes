@@ -1,0 +1,23 @@
+# pieced together from 
+#    https://stackoverflow.com/questions/9976986/force-lf-eol-in-git-repo-and-working-copy#answer-9977954
+#    https://stackoverflow.com/questions/29435156/what-will-text-auto-eol-lf-in-gitattributes-do
+#    https://github.com/git/git/blob/master/Documentation/RelNotes/2.10.0.txt#L248
+#
+# be sure to run the following first
+#
+# git config core.eol lf
+# git config core.autocrlf input
+#
+* text=auto eol=lf
+
+# image formats
+*.jpg binary
+*.png binary
+*.ico binary
+
+# fonts
+*.eot binary
+*.ttf binary
+*.woff binary
+*.woff2 binary
+*.eot binary
