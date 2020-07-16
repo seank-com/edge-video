@@ -4,11 +4,24 @@
 ## Setup
 
 1. Use the [Azure sample](https://github.com/Azure-Samples/NVIDIA-Deepstream-Azure-IoT-Edge-on-a-NVIDIA-Jetson-Nano)
+
+https://desertbot.io/blog/jetson-nano-power-supply-barrel-vs-micro-usb
+
     1. As a guide for steps setting up IoTEdge on the Nano.
     2. Later as a pattern for deployment manifests
 2. The [Troublshooting](https://docs.microsoft.com/en-us/azure/iot-edge/troubleshoot-common-errors#edge-agent-module-reports-empty-config-file-and-no-modules-start-on-the-device
 ) section has info about setting the dns server (helpful on corpnet)
 3. (Optional) Install [vscode](https://github.com/JetsonHacksNano/installVSCode)
+
+https://github.com/idavis/jetson-containers
+
+https://ngc.nvidia.com/catalog/containers/nvidia:deepstream
+
+https://ngc.nvidia.com/catalog/containers
+https://ngc.nvidia.com/catalog/containers/nvidia:l4t-tensorflow
+https://ngc.nvidia.com/catalog/containers/nvidia:l4t-ml
+https://ngc.nvidia.com/catalog/containers/nvidia:l4t-base
+https://ngc.nvidia.com/catalog/containers/nvidia:tensorflow
 
 https://docs.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/export-model-python
 
