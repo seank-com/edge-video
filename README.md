@@ -1,7 +1,7 @@
 
 # edge-video
 
-## Setup
+## Setup JetsonNano
 
 1. Configure Jetson Nano (from [Azure sample](https://github.com/Azure-Samples/NVIDIA-Deepstream-Azure-IoT-Edge-on-a-NVIDIA-Jetson-Nano))
     1. Acquire JetsonNano, 5V-4A Barrel Jack, cooling fan
@@ -75,6 +75,17 @@
     ```
 1. Configure access to camera (from [nVidia](https://github.com/NVIDIA/nvidia-docker/wiki/NVIDIA-Container-Runtime-on-Jetson#supported-devices))
 1. Configure IoTEdge (from [Docs](https://docs.microsoft.com/en-us/azure/iot-edge/how-to-install-iot-edge-linux#option-1-manual-provisioning) with [troubleshooting](https://docs.microsoft.com/en-us/azure/iot-edge/troubleshoot-common-errors#edge-agent-module-reports-empty-config-file-and-no-modules-start-on-the-device)) TBD
+
+## Build container
+
+The container builds on the [nvcr.io/nvidia/l4t-tensorflow:r32.4.3-tf1.15-py3](https://github.com/dusty-nv/jetson-containers/blob/master/Dockerfile.tensorflow) container itself derived from [nvcr.io/nvidia/l4t-base:r32.4.3]() both of which are hosted on [nVidia's GPU Cloud](https://ngc.nvidia.com/catalog/containers/). To build it, run the following.
+
+
+```bash
+$ sudo docker build -f Dockerfile -t edge-video src/
+```
+
+
 
 ```bash
 $ head -n 1 /etc/nv_tegra_release
