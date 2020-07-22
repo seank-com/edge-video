@@ -4,5 +4,8 @@ WORKDIR /root
 
 RUN pip3 install pillow
 
-COPY test.py /root/test.py
-
+COPY labels.txt /root/labels.txt
+COPY model.pb /root/model.pb
+COPY object_detection.py /root/object_detection.py
+COPY predict.py /root/predict.py
+COPY pen.jpg /root/pen.jpg
