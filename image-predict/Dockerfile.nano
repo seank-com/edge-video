@@ -1,0 +1,21 @@
+#
+# nvcr.io/nvidia/l4t-tensorflow:r32.4.3-tf1.15-py3 dockerfile can be found at 
+# https://github.com/dusty-nv/jetson-containers/blob/master/Dockerfile.tensorflow
+# a derivative of nvcr.io/nvidia/l4t-base:r32.4.3
+# 
+# both are hosted at https://ngc.nvidia.com/catalog/containers/
+#
+FROM nvcr.io/nvidia/l4t-tensorflow:r32.4.3-tf1.15-py3 as base
+
+RUN pip3 install flask pillow 
+
+COPY app app/
+
+# Expose the port
+EXPOSE 80
+
+# Set the working directory
+WORKDIR /app
+
+# Run the flask server for the endpoints
+CMD python -u app.py
