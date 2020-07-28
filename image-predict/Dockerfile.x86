@@ -1,7 +1,6 @@
-FROM python:3.7-slim
+FROM nvcr.io/nvidia/tensorflow:20.03-tf1-py3
 
-RUN pip install -U pip
-RUN pip install numpy==1.17.3 tensorflow==2.0.0 flask pillow
+RUN pip install flask
 
 COPY app /app
 

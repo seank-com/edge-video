@@ -1,5 +1,25 @@
 # WebRTC Dockerfile
 
+This example illustrates establishing audio, video and a data channel with a
+browser. It also performs some image processing on the video frames using
+OpenCV.
+
+
+    $ pip3 install aiohttp aiortc opencv-python
+    $ python server.py
+
+You can then browse to the following page with your browser:
+
+http://127.0.0.1:8080
+
+Once you click `Start` the browser will send the audio and video from its
+webcam to the server.
+
+The server will play a pre-recorded audio clip and send the received video back
+to the browser, optionally applying a transform to it.
+
+In parallel to media streams, the browser sends a 'ping' message over the data
+channel, and the server replies with 'pong'.
 
 
 ## Build
@@ -7,7 +27,7 @@
 To build on x86 Linux Desktop with nVidia GPU
 
 ```bash
-$ docker build -f Dockerfile -t stream-handler .
+$ docker build -t stream-handler .
 ```
 
 ## Run and test locally
@@ -15,10 +35,18 @@ $ docker build -f Dockerfile -t stream-handler .
 To run and test
 
 ```bash
-$ docker run --gpus all -p 127.0.0.1:80:80 -d stream-handler
+$ docker run -it --rm -p 127.0.0.1:8080:8080 stream-handler
 ```
 
+Open [http://127.0.0.1:8080](http://127.0.0.1:8080) in a browser
+
 ## Reference
+
+https://www.datamachines.io/blog/toward-a-containerized-nvidia-cuda-tensorflow-and-opencv
+https://hub.docker.com/r/datamachines/cuda_tensorflow_opencv
+https://github.com/datamachines/cuda_tensorflow_opencv/blob/master/README.md
+
+https://opensource.com/article/19/1/gstreamer
 
 - https://stackoverflow.com/questions/53187474/receive-webrtc-video-stream-using-python-opencv-in-real-time
 - https://stackoverflow.com/questions/53187474/receive-webrtc-video-stream-using-python-opencv-in-real-time
