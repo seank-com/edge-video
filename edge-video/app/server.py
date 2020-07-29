@@ -160,13 +160,33 @@ class VideoTransformTrack(MediaStreamTrack):
 
             return new_frame
 
-# *****
+# ***** FROM datamachines/cudnn_tensorflow_opencv:10.2_1.15.3_4.3.0-20200615
 # *****
 # ***** Average decode1 3.9505720138549805ms
 # ***** Average decode2 3.9505720138549805ms
 # ***** Average predict 997.0891714096069ms
 # ***** Average draw 0.281524658203125ms
 # ***** Average encode 0.48339366912841797ms
+# *****
+# *****
+
+# ***** FROM datamachines/cuda_tensorflow_opencv:10.2_1.15.3_4.3.0-20200615
+# *****
+# ***** Average decode1 2.7838945388793945ms
+# ***** Average decode2 2.7838945388793945ms
+# ***** Average predict 691.7383670806885ms
+# ***** Average draw 0.20651817321777344ms
+# ***** Average encode 0.5933284759521484ms
+# *****
+# *****
+
+# ***** FROM nvcr.io/nvidia/tensorflow:20.03-tf1-py3
+# *****
+# ***** Average decode1 2.6232004165649414ms
+# ***** Average decode2 2.6232004165649414ms
+# ***** Average predict 793.6902761459351ms
+# ***** Average draw 0.4306793212890625ms
+# ***** Average encode 0.9307622909545898ms
 # *****
 # *****
 
