@@ -50,7 +50,7 @@ $ curl -v -X POST http://127.0.0.1/image -F imageData=@pen.jpg
     ```
 1. [Use SSH from your development machine](https://code.visualstudio.com/docs/remote/ssh-tutorial)
 
-1. Configure IoTEdge (from [Docs](https://docs.microsoft.com/en-us/azure/iot-edge/how-to-install-iot-edge-linux#option-1-manual-provisioning) with [troubleshooting](https://docs.microsoft.com/en-us/azure/iot-edge/troubleshoot-common-errors#edge-agent-module-reports-empty-config-file-and-no-modules-start-on-the-device)) TBD
+1. Configure IoTEdge (from [Docs](https://docs.microsoft.com/en-us/azure/iot-edge/how-to-install-iot-edge-linux#option-1-manual-provisioning) with [troubleshooting](https://docs.microsoft.com/en-us/azure/iot-edge/troubleshoot-common-errors#edge-agent-module-reports-empty-config-file-and-no-modules-start-on-the-device)) - "10.50.10.50" and "10.50.50.50"
 
 Useful Commands
 
