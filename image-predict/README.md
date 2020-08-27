@@ -38,6 +38,26 @@ $ curl -v -X POST http://127.0.0.1/image -F imageData=@pen.jpg
     1. Acquire JetsonNano, 5V-4A Barrel Jack, cooling fan
     1. Install [JetPack 4.4](https://developer.nvidia.com/embedded/jetpack#install)
 
+1. Make Sure Jetson is in MaxN power mode.
+    1. You can query the current power mode using this command 
+        ```bash
+        $ sudo nvpmodel -q --verbose
+        ```
+    1. If you need to set it use this command 
+        ```bash
+        $ sudo nvpmodel -m 0
+        ```
+
+1. Turn off graphical mode
+    1. You can turn off graphic mode (saves GPU memory) using this command 
+        ```bash
+        $ sudo systemctl set-default multi-user.target
+        ```
+    1. You can re-enable graphic mode using this command 
+        ```bash
+        $ sudo systemctl set-default graphical.target
+        ```
+
 1. Install IoTEdge (from [Docs](https://docs.microsoft.com/en-us/azure/iot-edge/how-to-install-iot-edge-linux))
     ```bash
     $ wget -O microsoft-prod.list https://packages.microsoft.com/config/ubuntu/18.04/multiarch/prod.list
